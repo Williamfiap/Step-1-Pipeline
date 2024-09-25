@@ -83,4 +83,5 @@ resource "aws_autoscaling_group" "ec2-asg" {
   vpc_zone_identifier = [var.sn-priv-az1a_id_imput_compute, var.sn-priv-az1c_id_imput_compute]
 }
 
+#a
 
