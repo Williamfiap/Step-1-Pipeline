@@ -57,13 +57,18 @@ resource "aws_lb_listener" "elb_listener" {
   }
 }
 
+data "template_file" "userdata" {
+  template = file("./modules/compute/scripts/userdata.sh")
+}
+
+
 resource "aws_launch_template" "ec2-launch-template" {
   name_prefix   = "app-dynamicsite"
   image_id      = "ami-02e136e904f3da870"
   instance_type = "t2.micro"
   key_name      = "vockey"
   vpc_security_group_ids =  [aws_security_group.sg_ec2.id]
-  user_data = filebase64("${path.root}/scripts/userdata.sh")
+  user_data = base64encode(data.template_file.userdata.rendered)
 }
 
 resource "aws_autoscaling_group" "ec2-asg" {
