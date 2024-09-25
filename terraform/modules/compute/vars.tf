@@ -81,3 +81,7 @@ variable "ingress_protocol_ec2" {
 variable "ingress_cidr_blocks_ec2" {
     description = "value of cidr blocks"   
 }
+
+variable "min_size" {
+    description = "min size"
+}

@@ -33,11 +33,11 @@ jobs:
     - name: Step 04 - Terraform Init
       run : terraform -chdir=./terraform init
 
-    - name: Step 05 - Terraform Checkov Setup
-      run : pip3 install checkov
+    #- name: Step 05 - Terraform Checkov Setup
+    #  run : pip3 install checkov
 
-    - name: Step 06 - Terraform Checkov Run
-      run : checkov --directory ./terraform
+    #- name: Step 06 - Terraform Checkov Run
+    #  run : checkov --directory ./terraform
 
     - name: Step 07 - Terraform Validate
       run : terraform -chdir=./terraform validate

@@ -37,5 +37,6 @@ module "compute" {
   sn-priv-az1a_id_imput_compute    = module.network.sn-priv-az1a_id_output_network
   sn-pub-az1c_id_imput_compute     = module.network.sn-pub-az1c_id_output_network
   sn-priv-az1c_id_imput_compute    = module.network.sn-priv-az1c_id_output_network
+  min_size = var.min_size
 }
 //valor_que_estou_recebendo_no_compute = module.network.valor_que_eu_estou_enviando_do_network

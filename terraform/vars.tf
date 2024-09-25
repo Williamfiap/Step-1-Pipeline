@@ -122,3 +122,8 @@ variable "ingress_cidr_blocks_ec2" {
   description = "value of cidr blocks"  
   default = ["0.0.0.0/0"]  
 }
+
+variable "min_size" {
+  description = "min size"
+  default = 1
+}

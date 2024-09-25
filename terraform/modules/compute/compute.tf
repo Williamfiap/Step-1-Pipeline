@@ -74,7 +74,7 @@ resource "aws_launch_template" "ec2-launch-template" {
 resource "aws_autoscaling_group" "ec2-asg" {
   desired_capacity     = 2
   max_size             = 4
-  min_size             = 1
+  min_size             = var.min_size
   launch_template {
     id = aws_launch_template.ec2-launch-template.id
     version = "$Latest"
