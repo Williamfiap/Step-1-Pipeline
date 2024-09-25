@@ -59,7 +59,7 @@ resource "aws_lb_listener" "elb_listener" {
 
 resource "aws_launch_template" "ec2-launch-template" {
   name_prefix   = "app-dynamicsite"
-  image_id      = "ami-0c55b159cbfafe1f0"
+  image_id      = "ami-02e136e904f3da870"
   instance_type = "t2.micro"
   key_name      = "vockey"
   vpc_security_group_ids =  [aws_security_group.sg_ec2.id]
